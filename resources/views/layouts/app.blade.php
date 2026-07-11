@@ -63,7 +63,7 @@
     </main>
 
     @unless(View::hasSection('hide-footer'))
-        @include('partials.site-footer')
+        @include('partials.site-footer-cta')
     @endunless
 </body>
 </html>
