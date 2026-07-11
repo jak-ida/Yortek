@@ -21,6 +21,7 @@
                     <a href="{{ route('home') }}" class="glass-nav__item {{ request()->routeIs('home') ? 'glass-nav__item--active' : '' }}">Home</a>
                     <a href="{{ route('about') }}" class="glass-nav__item {{ request()->routeIs('about') ? 'glass-nav__item--active' : '' }}">About</a>
                     <a href="{{ route('services') }}" class="glass-nav__item {{ request()->routeIs('services') ? 'glass-nav__item--active' : '' }}">Services</a>
+                    <a href="{{ route('projects.index') }}" class="glass-nav__item {{ request()->routeIs('projects.*') ? 'glass-nav__item--active' : '' }}">Projects</a>
                     <a href="{{ route('contact') }}" class="glass-nav__item {{ request()->routeIs('contact') ? 'glass-nav__item--active' : '' }}">Contact</a>
                 </nav>
 
@@ -47,6 +48,7 @@
             <a href="{{ route('home') }}" class="mobile-nav-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
             <a href="{{ route('about') }}" class="mobile-nav-link {{ request()->routeIs('about') ? 'active' : '' }}">About</a>
             <a href="{{ route('services') }}" class="mobile-nav-link {{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
+            <a href="{{ route('projects.index') }}" class="mobile-nav-link {{ request()->routeIs('projects.*') ? 'active' : '' }}">Projects</a>
             <a href="{{ route('contact') }}" class="mobile-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
             <div class="mt-3 pt-3 border-top d-flex align-items-center justify-content-between gap-3">
                 <span class="small text-theme-muted">Appearance</span>

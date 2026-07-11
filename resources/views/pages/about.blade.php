@@ -3,36 +3,11 @@
 @section('title', 'About — Yortek Innovations')
 
 @section('content')
-    <div class="home-hero-scene about-hero-scene position-relative text-white overflow-hidden" style="isolation: isolate;">
-        <div class="home-hero-scene__backdrop pe-none" aria-hidden="true"
-            style="background-image: url('{{ asset('images/hero-background.png') }}')">
-            <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
-        </div>
-
-        <div class="pe-none position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;" aria-hidden="true">
-            <div class="home-hero-orb home-hero-orb--teal-lg animate-pulse"></div>
-            <div class="home-hero-orb home-hero-orb--blue animate-pulse" style="animation-delay: 1.2s;"></div>
-        </div>
-
-        <section class="about-hero position-relative" style="z-index: 10;">
-            <div class="container-xl px-4 px-sm-3 px-lg-5">
-                <div class="text-start" style="max-width: 48rem;">
-                    <div class="hero-enter hero-pill mb-4">
-                        <span class="hero-pill__dot" aria-hidden="true"></span>
-                        Who We Are
-                    </div>
-
-                    <h1 class="hero-enter hero-enter-delay-1 about-hero-title fw-bold mb-4">
-                        Built with Purpose
-                    </h1>
-
-                    <p class="hero-enter hero-enter-delay-2 home-hero-subtitle mb-0 lh-base" style="max-width: 40rem;">
-                        We are focused on helping organizations build, modernize, and scale with clarity and care.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
+    <x-page-hero
+        eyebrow="Who We Are"
+        title="Built with Purpose"
+        subtitle="We are focused on helping organizations build, modernize, and scale with clarity and care."
+    />
 
     <section class="position-relative section-surface home-why-section">
         <div class="container-xl px-4 px-lg-5">
@@ -53,7 +28,7 @@
                             <div class="testimonial-avatar testimonial-avatar--blue">YI</div>
                             <div>
                                 <cite class="fst-normal fw-semibold text-theme small">Yortek Innovations</cite>
-                                <p class="text-theme-muted mb-0" style="font-size: 0.75rem;">Our guiding principle</p>
+                                <p class="text-theme-muted text-meta mb-0">Our guiding principle</p>
                             </div>
                         </footer>
                     </blockquote>
@@ -69,15 +44,13 @@
         </div>
     </section>
 
-    <section class="home-services-showcase position-relative overflow-hidden py-5">
+    <section class="home-services-showcase position-relative overflow-hidden">
         <div class="container-xl px-4 px-lg-5">
-            <div class="reveal mb-5" style="max-width: 42rem;">
-                <p class="section-eyebrow text-primary mb-2">Our Values</p>
-                <h2 class="display-6 fw-bold text-theme lh-sm mb-3">What guides every engagement</h2>
-                <p class="section-lead mb-0">
-                    The principles behind how we think, build, and partner with our clients.
-                </p>
-            </div>
+            <x-section-intro
+                eyebrow="Our Values"
+                title="What guides every engagement"
+                lead="The principles behind how we think, build, and partner with our clients."
+            />
 
             <div class="about-media-grid reveal mb-4">
                 <div class="about-media about-media--tile">
@@ -178,7 +151,7 @@
         </div>
     </section>
 
-    <section class="about-partner-scroll position-relative section-surface py-5">
+    <section class="about-partner-scroll position-relative section-surface home-how-section">
         <div class="container-xl px-4 px-lg-5">
             <div class="about-partner-scroll__layout">
                 <div class="about-partner-scroll__sticky reveal">

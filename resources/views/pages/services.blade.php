@@ -3,36 +3,11 @@
 @section('title', 'Services — Yortek Innovations')
 
 @section('content')
-    <div class="home-hero-scene about-hero-scene position-relative text-white overflow-hidden" style="isolation: isolate;">
-        <div class="home-hero-scene__backdrop pe-none" aria-hidden="true"
-            style="background-image: url('{{ asset('images/hero-background.png') }}')">
-            <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
-        </div>
-
-        <div class="pe-none position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;" aria-hidden="true">
-            <div class="home-hero-orb home-hero-orb--teal-lg animate-pulse"></div>
-            <div class="home-hero-orb home-hero-orb--blue animate-pulse" style="animation-delay: 1.2s;"></div>
-        </div>
-
-        <section class="about-hero position-relative" style="z-index: 10;">
-            <div class="container-xl px-4 px-sm-3 px-lg-5">
-                <div class="text-start" style="max-width: 48rem;">
-                    <div class="hero-enter hero-pill mb-4">
-                        <span class="hero-pill__dot" aria-hidden="true"></span>
-                        What We Do
-                    </div>
-
-                    <h1 class="hero-enter hero-enter-delay-1 about-hero-title fw-bold mb-4">
-                        Services built for modern teams
-                    </h1>
-
-                    <p class="hero-enter hero-enter-delay-2 home-hero-subtitle mb-0 lh-base" style="max-width: 40rem;">
-                        Comprehensive technology solutions tailored to your business — from strategy and design to launch and long-term support.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
+    <x-page-hero
+        eyebrow="What We Do"
+        title="Services built for modern teams"
+        subtitle="Comprehensive technology solutions tailored to your business — from strategy and design to launch and long-term support."
+    />
 
     <section class="position-relative section-surface home-why-section">
         <div class="container-xl px-4 px-lg-5">
@@ -58,15 +33,13 @@
         </div>
     </section>
 
-    <section class="home-services-showcase position-relative overflow-hidden py-5">
+    <section class="home-services-showcase position-relative overflow-hidden">
         <div class="container-xl px-4 px-lg-5">
-            <div class="reveal mb-5" style="max-width: 42rem;">
-                <p class="section-eyebrow text-primary mb-2">Core Services</p>
-                <h2 class="display-6 fw-bold text-theme lh-sm mb-3">What we help you build</h2>
-                <p class="section-lead mb-0">
-                    Practical, scalable solutions across the full product lifecycle.
-                </p>
-            </div>
+            <x-section-intro
+                eyebrow="Core Services"
+                title="What we help you build"
+                lead="Practical, scalable solutions across the full product lifecycle."
+            />
 
             <div class="row g-3">
                 @foreach ([

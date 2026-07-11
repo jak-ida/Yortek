@@ -3,36 +3,11 @@
 @section('title', 'Contact — Yortek Innovations')
 
 @section('content')
-    <div class="home-hero-scene about-hero-scene position-relative text-white overflow-hidden" style="isolation: isolate;">
-        <div class="home-hero-scene__backdrop pe-none" aria-hidden="true"
-            style="background-image: url('{{ asset('images/hero-background.png') }}')">
-            <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay"></div>
-        </div>
-
-        <div class="pe-none position-absolute top-0 start-0 w-100 h-100" style="z-index: 1;" aria-hidden="true">
-            <div class="home-hero-orb home-hero-orb--teal-lg animate-pulse"></div>
-            <div class="home-hero-orb home-hero-orb--blue animate-pulse" style="animation-delay: 1.2s;"></div>
-        </div>
-
-        <section class="about-hero position-relative" style="z-index: 10;">
-            <div class="container-xl px-4 px-sm-3 px-lg-5">
-                <div class="text-start" style="max-width: 48rem;">
-                    <div class="hero-enter hero-pill mb-4">
-                        <span class="hero-pill__dot" aria-hidden="true"></span>
-                        Get In Touch
-                    </div>
-
-                    <h1 class="hero-enter hero-enter-delay-1 about-hero-title fw-bold mb-4">
-                        Let&rsquo;s start the conversation
-                    </h1>
-
-                    <p class="hero-enter hero-enter-delay-2 home-hero-subtitle mb-0 lh-base" style="max-width: 40rem;">
-                        Have a project in mind? Tell us what you are building and we will help you find the right path forward.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </div>
+    <x-page-hero
+        eyebrow="Get In Touch"
+        title="Let&rsquo;s start the conversation"
+        subtitle="Have a project in mind? Tell us what you are building and we will help you find the right path forward."
+    />
 
     <section class="position-relative section-surface home-why-section">
         <div class="container-xl px-4 px-lg-5">
@@ -93,7 +68,7 @@
                 <div class="col-lg-7 reveal reveal-delay-1">
                     <div class="home-value-card rounded-4 p-4 p-lg-5">
                         <p class="section-eyebrow text-primary mb-2">Send a Message</p>
-                        <h2 class="h4 fw-bold text-theme mb-4">Tell us about your project</h2>
+                        <h2 class="display-6 fw-bold text-theme lh-sm mb-4">Tell us about your project</h2>
                         <form>
                             <div class="mb-3">
                                 <label for="name" class="form-label small fw-medium text-theme">Name</label>
@@ -110,7 +85,7 @@
                             <button type="button" class="btn-yortek btn-raise w-100">
                                 Send Message
                             </button>
-                            <p class="text-theme-muted text-center mt-3 mb-0" style="font-size: 0.75rem;">Form submission will be enabled in a future update.</p>
+                            <p class="text-theme-muted text-meta text-center mt-3 mb-0">Form submission will be enabled in a future update.</p>
                         </form>
                     </div>
                 </div>
@@ -118,7 +93,7 @@
         </div>
     </section>
 
-    <section class="home-services-showcase position-relative overflow-hidden py-5">
+    <section class="home-services-showcase position-relative overflow-hidden">
         <div class="container-xl px-4 px-lg-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 reveal">
@@ -135,7 +110,7 @@
                             <div class="testimonial-avatar testimonial-avatar--teal">YT</div>
                             <div>
                                 <cite class="fst-normal fw-semibold text-theme small">Yortek Team</cite>
-                                <p class="text-theme-muted mb-0" style="font-size: 0.75rem;">Client partnerships</p>
+                                <p class="text-theme-muted text-meta mb-0">Client partnerships</p>
                             </div>
                         </footer>
                     </blockquote>

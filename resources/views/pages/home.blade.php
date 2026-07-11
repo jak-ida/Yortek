@@ -16,8 +16,8 @@
         </div>
 
         <section class="home-hero position-relative" style="z-index: 10;">
-            <div class="container-xl px-4 px-sm-3 px-lg-5 py-5">
-                <div class="text-start" style="max-width: 56rem;">
+            <div class="container-xl px-4 px-lg-5 py-5">
+                <div class="text-start page-hero__content page-hero__content--wide">
                     <div class="hero-enter hero-pill mb-4">
                         <span class="hero-pill__dot" aria-hidden="true"></span>
                         Technology Partners
@@ -34,7 +34,7 @@
                         </span>
                     </h1>
 
-                    <p class="hero-enter hero-enter-delay-2 home-hero-subtitle mb-4 lh-base" style="max-width: 42rem;">
+                    <p class="hero-enter hero-enter-delay-2 home-hero-subtitle page-hero__subtitle page-hero__subtitle--wide mb-4 lh-base">
                         Build bold. Scale smart.
                     </p>
 
@@ -126,15 +126,13 @@
         ];
     @endphp
 
-    <section id="services" class="home-services-showcase position-relative overflow-hidden section-surface py-5">
+    <section id="services" class="home-services-showcase position-relative overflow-hidden">
         <div class="container-xl px-4 px-lg-5">
-            <div class="reveal mb-5" style="max-width: 42rem;">
-                <p class="section-eyebrow text-primary mb-2">Our Expertise</p>
-                <h2 class="display-6 fw-bold text-theme lh-sm mb-3">Services Tailored To Your Needs</h2>
-                <p class="section-lead mb-0">
-                    Anything you need to build, modernize, or scale your business.
-                </p>
-            </div>
+            <x-section-intro
+                eyebrow="Our Expertise"
+                title="Services tailored to your needs"
+                lead="Anything you need to build, modernize, or scale your business."
+            />
         </div>
 
         <div class="home-services-marquee d-flex flex-column gap-3 gap-sm-4">
@@ -171,10 +169,11 @@
 
     <section id="how" class="position-relative section-surface home-how-section">
         <div class="container-xl px-4 px-lg-5">
-            <div class="reveal mb-5" style="max-width: 42rem;">
-                <p class="section-eyebrow text-primary mb-2">How We Work</p>
-                <h2 class="display-6 fw-bold text-theme lh-sm mb-3">A clear path from idea to impact</h2>
-            </div>
+            <x-section-intro
+                class="mb-5"
+                eyebrow="How We Work"
+                title="A clear path from idea to impact"
+            />
 
             <div class="home-process-flow">
                 <div class="home-process-flow__step reveal reveal-delay-1">
@@ -234,12 +233,12 @@
         </div>
     </section>
 
-    <section class="position-relative section-surface py-5 home-testimonials-section">
+    <section class="position-relative section-surface home-how-section">
         <div class="container-xl px-4 px-lg-5">
-            <div class="reveal mb-5" style="max-width: 42rem;">
-                <p class="section-eyebrow text-primary mb-2">Client Stories</p>
-                <h2 class="display-6 fw-bold text-theme lh-sm mb-0">Trusted by teams who expect more</h2>
-            </div>
+            <x-section-intro
+                eyebrow="Client Stories"
+                title="Trusted by teams who expect more"
+            />
 
             <div class="row g-4">
                 <div class="col-md-4">
@@ -250,7 +249,7 @@
                             <div class="testimonial-avatar testimonial-avatar--blue">AK</div>
                             <div>
                                 <cite class="fst-normal fw-semibold text-theme small">Amina K.</cite>
-                                <p class="text-theme-muted mb-0" style="font-size: 0.75rem;">Operations Director</p>
+                                <p class="text-theme-muted text-meta mb-0">Operations Director</p>
                             </div>
                         </footer>
                     </blockquote>
@@ -264,7 +263,7 @@
                             <div class="testimonial-avatar testimonial-avatar--teal">JR</div>
                             <div>
                                 <cite class="fst-normal fw-semibold text-theme small">James R.</cite>
-                                <p class="text-theme-muted mb-0" style="font-size: 0.75rem;">Founder, SaaS Startup</p>
+                                <p class="text-theme-muted text-meta mb-0">Founder, SaaS Startup</p>
                             </div>
                         </footer>
                     </blockquote>
@@ -278,7 +277,7 @@
                             <div class="testimonial-avatar testimonial-avatar--indigo">ML</div>
                             <div>
                                 <cite class="fst-normal fw-semibold text-theme small">Maria L.</cite>
-                                <p class="text-theme-muted mb-0" style="font-size: 0.75rem;">CTO, Retail Group</p>
+                                <p class="text-theme-muted text-meta mb-0">CTO, Retail Group</p>
                             </div>
                         </footer>
                     </blockquote>

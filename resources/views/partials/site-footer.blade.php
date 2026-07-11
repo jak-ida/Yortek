@@ -13,6 +13,7 @@
                             <li class="mb-2"><a href="{{ route('home') }}">Home</a></li>
                             <li class="mb-2"><a href="{{ route('about') }}">About</a></li>
                             <li class="mb-2"><a href="{{ route('services') }}">Services</a></li>
+                            <li class="mb-2"><a href="{{ route('projects.index') }}">Projects</a></li>
                             <li><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>
                     </div>
@@ -51,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-5">
+            <div class="col-12 col-lg-5 text-lg-end">
                 <div class="site-footer__brand mb-3">Yortek</div>
             </div>
         </div>

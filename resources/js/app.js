@@ -134,3 +134,24 @@ if (marqueeCards.length > 0) {
         });
     });
 }
+
+const galleryTabs = document.querySelectorAll('[data-gallery-tab]');
+const galleryPanels = document.querySelectorAll('[data-gallery-panel]');
+
+if (galleryTabs.length > 0 && galleryPanels.length > 0) {
+    galleryTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.galleryTab;
+
+            galleryTabs.forEach((button) => {
+                const isActive = button.dataset.galleryTab === target;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            galleryPanels.forEach((panel) => {
+                panel.classList.toggle('is-active', panel.dataset.galleryPanel === target);
+            });
+        });
+    });
+}
