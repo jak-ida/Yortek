@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Contact — Yortek Innovations')
-
 @section('content')
     <x-page-hero
         eyebrow="Get In Touch"
-        title="Let&rsquo;s start the conversation"
+        title="Let's start the conversation"
         subtitle="Have a project in mind? Tell us what you are building and we will help you find the right path forward."
     />
 

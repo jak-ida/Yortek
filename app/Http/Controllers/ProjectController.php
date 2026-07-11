@@ -26,6 +26,11 @@ class ProjectController extends Controller
         $previousProject = $currentIndex > 0 ? $allProjects[$currentIndex - 1] : null;
         $nextProject = $currentIndex < count($allProjects) - 1 ? $allProjects[$currentIndex + 1] : null;
 
-        return view('pages.projects.show', compact('project', 'previousProject', 'nextProject'));
+        return view('pages.projects.show', [
+            'project' => $project,
+            'previousProject' => $previousProject,
+            'nextProject' => $nextProject,
+            'seo' => \App\Support\Seo::forProject($project),
+        ]);
     }
 }

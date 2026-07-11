@@ -3,16 +3,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', config('app.name'))</title>
+    @include('partials.seo-head')
     @include('partials.theme-init')
     @fonts
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('head')
 </head>
 <body class="site-body d-flex flex-column min-vh-100">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    @if (! empty($seo->breadcrumbs))
+        <nav aria-label="Breadcrumb" class="visually-hidden">
+            <ol>
+                @foreach ($seo->breadcrumbs as $crumb)
+                    <li>
+                        <a href="{{ $crumb['url'] }}">{{ $crumb['name'] }}</a>
+                    </li>
+                @endforeach
+            </ol>
+        </nav>
+    @endif
     <header class="site-header fixed-top d-flex justify-content-center px-3 px-sm-4 pt-3" style="pointer-events: none;">
         <div class="glass rounded-pill px-3 px-sm-4 px-lg-5 w-100" style="pointer-events: auto;">
             <div class="position-relative d-flex align-items-center justify-content-between gap-3" style="height: 3.5rem; z-index: 2;">
-                <a href="{{ route('home') }}" class="d-flex align-items-center gap-2 text-decoration-none flex-shrink-0">
+                <a href="{{ route('home') }}" class="d-flex align-items-center gap-2 text-decoration-none flex-shrink-0" aria-label="{{ config('seo.organization.name') }} — Home">
                     <span class="brand-mark rounded-3 d-flex align-items-center justify-content-center text-white fw-bold small">Y</span>
                     <span class="brand-name d-none d-sm-inline">Yortek Innovations</span>
                 </a>
@@ -60,7 +73,7 @@
         </div>
     </div>
 
-    <main class="flex-grow-1">
+    <main id="main-content" class="flex-grow-1" tabindex="-1">
         @yield('content')
     </main>
 

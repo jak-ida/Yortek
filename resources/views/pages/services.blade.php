@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Services — Yortek Innovations')
-
 @section('content')
     <x-page-hero
         eyebrow="What We Do"
@@ -57,7 +55,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="{{ $service['icon'] }}"/>
                                 </svg>
                             </div>
-                            <h3 class="fw-bold text-theme mb-2">{{ $service['title'] }}</h3>
+                            <h3 id="{{ Str::slug($service['title']) }}" class="fw-bold text-theme mb-2">{{ $service['title'] }}</h3>
                             <p class="small text-theme-muted lh-base mb-0">{{ $service['desc'] }}</p>
                         </div>
                     </div>

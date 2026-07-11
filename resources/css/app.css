@@ -160,6 +160,28 @@ html {
     background-color: var(--bs-body-bg);
     transition: background-color 0.35s ease;
     overflow-x: clip;
+    scroll-behavior: smooth;
+}
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 2000;
+    padding: 0.65rem 1rem;
+    border-radius: 0.5rem;
+    background: #0f172a;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+}
+
+.skip-link:focus {
+    top: 1rem;
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
 }
 
 body {

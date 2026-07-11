@@ -1,0 +1,18 @@
+{
+    "name": "Yortek Innovations",
+    "short_name": "Yortek",
+    "description": "Technology partners for web development, mobile apps, and cloud solutions.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "lang": "en",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}

@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Home — Yortek Innovations')
-
 @section('content')
     <div class="home-hero-scene position-relative text-white overflow-hidden" style="isolation: isolate;">
         <div class="home-hero-scene__backdrop pe-none" aria-hidden="true"

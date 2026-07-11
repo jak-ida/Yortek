@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'About — Yortek Innovations')
-
 @section('content')
     <x-page-hero
         eyebrow="Who We Are"

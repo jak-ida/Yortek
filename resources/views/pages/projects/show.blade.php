@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', $project['title'] . ' — Yortek Innovations')
-
 @section('content')
     <x-page-hero hero-class="project-show-hero">
         <a href="{{ route('projects.index') }}" class="project-show-back hero-enter d-inline-flex align-items-center gap-2 text-decoration-none mb-4">
